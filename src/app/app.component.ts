@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-app';
+
+  items = ['make lunch!', 'create awesome todo app', 'walk the dog'];
+
+  removeItem(item: string): void {
+    this.items.splice(this.items.indexOf(item), 1);
+  }
 }
